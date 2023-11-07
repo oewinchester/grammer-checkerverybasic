@@ -30,6 +30,8 @@ let whereAreYou = storyWords.filter((word) => word.length > 10)
 
 console.log (whereAreYou)
 
-console.log(storyWords.join("  "));
 
-console.log(story)
+storyWords = storyWords.map((word) => word.includes ("GW") ? 'George Washington' : word)
+
+storyWords = storyWords.map((word) => word.includes ("very") ? word.delete : word)
+console.log(storyWords.join("  "));
